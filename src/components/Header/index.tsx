@@ -6,7 +6,7 @@ import HeaderMenu from "../HeaderMenu";
 
 export default function Header() {
     return (
-     <header className="flex flex-col items-center justify-center bg-[#EAE0D5] border-t-[8px] border-t-[#F47920] w-full">
+     <header className="flex flex-col items-center justify-center bg-[#EAE0D5] border-t-[8px] border-t-[#F47920] w-full shadow-[2px_3px_5px_rgba(0,0,0,0.2)]">
          <div className="flex flex-row items-center justify-between h-[122px] w-full px-24">
              <Image
                  src={Logo}
