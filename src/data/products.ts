@@ -1,4 +1,4 @@
-import { Product } from "@/app/@types/product";
+import { Product } from "@/@types/product";
 import GarrafaImage from "../../public/images/p1.png"
 import BolsaImage from "../../public/images/p2.png"
 import GalinhaImage from "../../public/images/p3.png"

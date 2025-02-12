@@ -1,4 +1,4 @@
-import { Category } from "@/app/@types/category";
+import { Category } from "@/@types/category";
 import ArtIcon from "../../public/categories/art-icon.svg";
 import HealthIcon from "../../public/categories/health-icon.svg";
 import ClothingIcon from "../../public/categories/clothing-icon.svg";
