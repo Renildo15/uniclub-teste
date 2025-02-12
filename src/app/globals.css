@@ -19,3 +19,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-section {
+  background: linear-gradient(to bottom, #00995D, #59B650), url('/background/bg.svg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
