@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import LocalIcon from "../../../public/icons/local-icon.svg"
-import UserIcon from "../../../public/icons/user-icon.svg"
-import CartIcon from "../../../public/icons/cart-icon.svg"
+import LocalIcon from "../../../../public/icons/local-icon.svg"
+import UserIcon from "../../../../public/icons/user-icon.svg"
+import CartIcon from "../../../../public/icons/cart-icon.svg"
 
 
 export default function HeaderOptions() {

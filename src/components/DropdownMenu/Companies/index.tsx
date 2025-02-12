@@ -1,4 +1,4 @@
-import More from "../../../public/icons/more-icon.svg"
+import More from "../../../../public/icons/more-icon.svg"
 import Image from 'next/image';
 
 export default function Companies() {

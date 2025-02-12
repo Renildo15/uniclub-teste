@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ChevronDown from "../../../public/icons/chevron-down-icon.svg"
+import ChevronDown from "../../../../public/icons/chevron-down-icon.svg"
 
 export default function Departments() {
     return (

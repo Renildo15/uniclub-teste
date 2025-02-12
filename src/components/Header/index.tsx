@@ -1,8 +1,8 @@
-import SearchInput from "../SearchInput";
-import HeaderOptions from "../HeaderOptions"; 
+import SearchInput from "./SearchInput";
+import HeaderOptions from "./HeaderOptions"; 
 import Image from "next/image";
 import Logo from "../../../public/logo.svg"
-import HeaderMenu from "../HeaderMenu";
+import HeaderMenu from "./HeaderMenu";
 
 export default function Header() {
     return (

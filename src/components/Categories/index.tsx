@@ -1,5 +1,5 @@
 import { categories } from "@/data";
-import CategoryItem from "../CategoryItem";
+import CategoryItem from "./CategoryItem";
 
 export default function Categories() {
     return (

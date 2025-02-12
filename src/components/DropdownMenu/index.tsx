@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import Departments from '../Departments';
-import Companies from '../Companies';
+import Departments from './Departments';
+import Companies from './Companies';
 
 interface IDropdownMenuProps {
     isOpen: boolean;

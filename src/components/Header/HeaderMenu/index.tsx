@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Menu from "../../../public/icons/menu-icon.svg"
-import ChevronDown from "../../../public/icons/chevron-down-icon.svg"
-import EIcon from "../../../public/icons/e-icon.svg"
-import DropdownMenu from "../DropdownMenu";
+import Menu from "../../../../public/icons/menu-icon.svg"
+import ChevronDown from "../../../../public/icons/chevron-down-icon.svg"
+import EIcon from "../../../../public/icons/e-icon.svg"
+import DropdownMenu from "../../DropdownMenu";
 
 export default function HeaderMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
