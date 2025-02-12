@@ -12,7 +12,7 @@ const images = [
     BannerTwo
 ]
 
-export default function Banner() {
+export default function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [hover, setHover] = useState(false);
 
