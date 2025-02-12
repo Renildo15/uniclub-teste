@@ -12,6 +12,12 @@ export default function ProductCard({ product }: IProductCardProps) {
         return value - discount;
     }
 
+    function calculateInstallments() {
+        if (!product.isCreditCard || !product.instalments) return 1;
+        const value = calculateDiscount(product.value)
+        return value / product.instalments
+    }
+
     return (
         <div className="bg-base-100 w-[220px] shadow-xl rounded-[5px]">
             <figure className="w-full h-[200px] overflow-hidden">
@@ -46,12 +52,14 @@ export default function ProductCard({ product }: IProductCardProps) {
                 <div className="flex flex-col min-h-[40px]">
                     {product.isCreditCard && (
                         <span className="text-[#737373] truncate text-[14px]">
-                            <strong className="font-semibold">{product.instalments}x R$ 24,95 sem juros</strong> no cartão
+                            <strong className="font-semibold">{product.instalments}x {calculateInstallments().toLocaleString('pt-br', { style: "currency", currency: "BRL" })} sem juros</strong> no cartão
                         </span>
                     )}
-                    <span className="text-[#737373] text-[14px]">
-                        ou <strong className="font-semibold">R$ 38,50 no pix</strong>
-                    </span>
+                   {product.isPix && product.pixValue && (
+                        <span className="text-[#737373] text-[14px]">
+                            ou <strong className="font-semibold">{product.pixValue.toLocaleString('pt-br', { style: "currency", currency: "BRL" })} no pix</strong>
+                        </span>
+                   )}
                 </div>
 
                 <span className="text-[#737373] truncate">
