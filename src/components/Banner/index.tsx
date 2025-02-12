@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ChevronLeft from "../../../public/icons/chevron-left-icon.svg";
 import ChevronRight from "../../../public/icons/chevron-right-icon.svg";
@@ -24,6 +24,14 @@ export default function Banner() {
         setActiveIndex((prev) => (prev - 1 + images.length) % images.length)
     }
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!hover) nextImage();
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [hover])
+
     return (
         <div
             className="relative w-full h-[300px] overflow-hidden flex items-center justify-center px-24"
@@ -35,6 +43,7 @@ export default function Banner() {
                 alt="Banner"
                 objectFit="cover"
                 className="transition-opacity duration-500 ease-in-out"
+                width={1200} height={300}
             />
 
             {hover && (
