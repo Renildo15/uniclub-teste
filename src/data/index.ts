@@ -1,5 +1,9 @@
 import { categories } from "./categories";
+import { departmentsListOne, departmentsListTwo, departmentsListThree } from "./departments";
 
 export {
-    categories
+    categories,
+    departmentsListOne, 
+    departmentsListTwo, 
+    departmentsListThree
 }

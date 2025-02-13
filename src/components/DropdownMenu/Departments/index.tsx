@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ChevronDown from "../../../../public/icons/chevron-down-icon.svg"
+import { departmentsListOne, departmentsListTwo, departmentsListThree } from "@/data";
 
 export default function Departments() {
     return (
@@ -7,11 +8,7 @@ export default function Departments() {
             <div className="flex flex-row w-full">
                 <div className="flex flex-col w-[80%] gap-y-6">
                     <div className="flex flex-row justify-between">
-                        {[
-                            { title: "Saúde e Bem-estar", items: ["Beleza", "Cuidados Pessoais", "Esportes e Aventura"] },
-                            { title: "Estilo", items: ["Vestuário", "Calçados", "Bijuterias e Acessórios"] },
-                            { title: "Eletro", items: ["Eletrodomésticos", "Celulares, Tablets e Ace...", "Câmeras e Acessórios"] }
-                        ].map((category, index) => (
+                        {departmentsListOne.map((category, index) => (
                             <div key={index} className="w-[32%]">
                                 <h3 className="text-[#737373] font-semibold text-[16px] sm:text-[18px] lg:text-[20px]">
                                     {category.title}
@@ -33,11 +30,7 @@ export default function Departments() {
                         ))}
                     </div>
                     <div className="flex flex-row justify-between">
-                        {[
-                            { title: "Casa", items: ["Casa, Jardim e Limpeza", "Móveis e Decoração", "Construção"] },
-                            { title: "Tincidunt", items: ["Tempor", "Consequant"] },
-                            { title: "Ipsum Lorem", items: ["Sit Amet", "Consequant", "Consequant"] }
-                        ].map((category, index) => (
+                        {departmentsListTwo.map((category, index) => (
                             <div key={index} className="w-[32%]">
                                 <h3 className="text-[#737373] font-semibold text-[16px] sm:text-[18px] lg:text-[20px]">
                                     {category.title}
@@ -64,11 +57,7 @@ export default function Departments() {
                         Mais Departamentos
                     </h3>
                     <ul className="flex flex-col gap-y-4 ml-2">
-                        {[
-                            "Petshop", "Produtos Regionais", "Brinquedos e Jogos",
-                            "Livros", "Música e Hobbies", "Bebês",
-                            "Alimentos e Bebidas", "Agro e Indústria"
-                        ].map((item, index) => (
+                        {departmentsListThree.map((item, index) => (
                             <li key={index} className="text-[#737373] text-[14px] sm:text-[16px] lg:text-[18px] hover:text-[#F47920] cursor-pointer">
                                 {item}
                             </li>
