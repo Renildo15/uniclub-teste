@@ -1,4 +1,5 @@
 import { Product } from "@/@types/product"
+import FavoriteIcon from "../../../../public/icons/favorite-icon.svg"
 import Image from "next/image"
 
 interface IProductCardProps {
@@ -19,8 +20,8 @@ export default function ProductCard({ product }: IProductCardProps) {
     }
 
     return (
-        <div className="bg-base-100 w-[220px] shadow-xl rounded-[5px]">
-            <figure className="w-full h-[200px] overflow-hidden">
+        <div className="bg-base-100 w-full sm:w-[48%] md:w-[30%] lg:w-[19%] shadow-xl rounded-[5px]">
+            <figure className="w-full overflow-hidden relative">
                 <Image
                     src={product.image}
                     alt={product.name}
@@ -29,9 +30,16 @@ export default function ProductCard({ product }: IProductCardProps) {
                     height={200}
                     className="object-cover"
                 />
+                <button className="absolute bottom-2 right-2 bg-white p-1.5 rounded-[80%] shadow-md hover:bg-gray-100 transition w-[26px] h-[26px]">
+                    <Image
+                        src={FavoriteIcon}
+                        alt="Favorito"
+                        width={20}
+                    />
+                </button>
             </figure>
             <div className="flex flex-col px-5 py-2 gap-2">
-                <h2 className="text-[#3F3F3F] text-[18px] line-clamp-2 w-full">{product?.name}</h2>
+                <h2 className="text-[#3F3F3F] text-[16px] 3xl:text-[18px] line-clamp-2 w-full">{product?.name}</h2>
                 <div className="flex flex-col">
                     {product.isDiscount ? (
                         <div className="flex flex-row gap-x-2">
@@ -62,9 +70,9 @@ export default function ProductCard({ product }: IProductCardProps) {
                    )}
                 </div>
 
-                <span className="text-[#737373] truncate">
+                <span className="text-[#737373] text-[14px] 3xl:text-[16px] truncate">
                     Vendido por 
-                    <a className="font-semibold hover:text-[#F47920] cursor-pointer underline"> {product.soldBy}</a>
+                    <a className="hover:text-[#F47920] cursor-pointer underline"> {product.soldBy}</a>
                 </span>
             </div>
         </div>

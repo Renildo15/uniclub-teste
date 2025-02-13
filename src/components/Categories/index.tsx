@@ -3,12 +3,14 @@ import CategoryItem from "./CategoryItem";
 
 export default function Categories() {
     return (
-        <div className="container mx-auto px-14">
-            <div className="flex flex-wrap justify-between gap-x-1 gap-y-4">
+        <div className="flex flex-col justify-center items-center w-full">
+            <div className="flex flex-row justify-between rounded-lg w-[84%] 3xl:w-[68%] 2xl:w-[67%] 
+                md:overflow-x-auto lg:flex-nowrap scrollbar-hide gap-x-4"
+            >
                 {categories.map((category, index) => (
-                    <CategoryItem key={index} category={category}/>
+                    <CategoryItem key={index} category={category} />
                 ))}
             </div>
         </div>
-    )
+    );
 }

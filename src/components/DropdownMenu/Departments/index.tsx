@@ -3,130 +3,82 @@ import ChevronDown from "../../../../public/icons/chevron-down-icon.svg"
 
 export default function Departments() {
     return (
-        <div className="flex flex-row w-full py-6 px-[40px]">
-            <div className='flex flex-row w-full'>
-                <div className='flex flex-col w-[80%] gap-y-6'>
-                    <div className='flex flex-row justify-between'>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Saúde e Bem-estar</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Beleza</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Cuidados Pessoais</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Esportes e Aventura</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
+        <div className="flex flex-row w-full py-[40px] px-[20px] sm:px-[40px] md:px-[60px] lg:px-[80px]">
+            <div className="flex flex-row w-full">
+                <div className="flex flex-col w-[80%] gap-y-6">
+                    <div className="flex flex-row justify-between">
+                        {[
+                            { title: "Saúde e Bem-estar", items: ["Beleza", "Cuidados Pessoais", "Esportes e Aventura"] },
+                            { title: "Estilo", items: ["Vestuário", "Calçados", "Bijuterias e Acessórios"] },
+                            { title: "Eletro", items: ["Eletrodomésticos", "Celulares, Tablets e Ace...", "Câmeras e Acessórios"] }
+                        ].map((category, index) => (
+                            <div key={index} className="w-[32%]">
+                                <h3 className="text-[#737373] font-semibold text-[16px] sm:text-[18px] lg:text-[20px]">
+                                    {category.title}
+                                </h3>
+                                <ul className="flex flex-col gap-y-4 sm:gap-y-6 ml-2">
+                                    {category.items.map((item, idx) => (
+                                        <li key={idx} className="text-[#737373] text-[14px] sm:text-[16px] lg:text-[18px] hover:text-[#F47920] cursor-pointer">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="flex flex-row gap-x-1 mt-4">
+                                    <span className="text-[#737373] text-[12px] sm:text-[14px] cursor-pointer hover:text-[#F47920]">
+                                        Ver mais
+                                    </span>
+                                    <Image src={ChevronDown} alt="chevron down" height={15} width={15} />
+                                </div>
                             </div>
-                        </div>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Estilo</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Vestuário</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Calçados</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Bijuterias e Acessórios</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
-                            </div>
-                        </div>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Eletro</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Eletrodomésticos</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Celulares, Tablets e Ace...</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Câmeras e Acessórios</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
-                            </div>
-                        </div>
+                        ))}
                     </div>
-                    <div className='flex flex-row justify-between'>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Casa</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Casa, Jardim e Limpeza</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Móveis e Decoração</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Construção</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
+                    <div className="flex flex-row justify-between">
+                        {[
+                            { title: "Casa", items: ["Casa, Jardim e Limpeza", "Móveis e Decoração", "Construção"] },
+                            { title: "Tincidunt", items: ["Tempor", "Consequant"] },
+                            { title: "Ipsum Lorem", items: ["Sit Amet", "Consequant", "Consequant"] }
+                        ].map((category, index) => (
+                            <div key={index} className="w-[32%]">
+                                <h3 className="text-[#737373] font-semibold text-[16px] sm:text-[18px] lg:text-[20px]">
+                                    {category.title}
+                                </h3>
+                                <ul className="flex flex-col gap-y-4 sm:gap-y-6 ml-2">
+                                    {category.items.map((item, idx) => (
+                                        <li key={idx} className="text-[#737373] text-[14px] sm:text-[16px] lg:text-[18px] hover:text-[#F47920] cursor-pointer">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="flex flex-row gap-x-1 mt-4">
+                                    <span className="text-[#737373] text-[12px] sm:text-[14px] cursor-pointer hover:text-[#F47920]">
+                                        Ver mais
+                                    </span>
+                                    <Image src={ChevronDown} alt="chevron down" height={15} width={15} />
+                                </div>
                             </div>
-                        </div>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Tincidunt</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Tempor</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Consequant</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
-                            </div>
-                        </div>
-                        <div className='w-[32%]'>
-                            <h3 className='text-[#737373] font-semibold text-[18px]'>Ipsum Lorem</h3>
-                            <ul className='flex flex-col gap-y-6 ml-2'>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Sit Amet</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Consequant</li>
-                                <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Consequant</li>
-                            </ul>
-                            <div className='flex flex-row gap-x-1 mt-4'>
-                                <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920]'>Ver mais</span>
-                                <Image
-                                    src={ChevronDown}
-                                    alt='chevron down'
-                                    height={15}
-                                    width={15}
-                                />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-                <div className='w-[20%] flex flex-col gap-y-2'>
-                    <h3 className='text-[#737373] font-semibold text-[18px]'>Mais Departamentos</h3>
-                    <ul className='flex flex-col gap-y-4 ml-2'>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Petshop</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Produtos Regionais</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Brinquedos e Jogos</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Livros</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Música e Hobbies</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Bebês</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Alimentos e Bebidas</li>
-                        <li className='text-[#737373] text-[18px] hover:text-[#F47920] cursor-pointer'>Agro e Indústria</li>
+                <div className="w-[20%] flex flex-col gap-y-2">
+                    <h3 className="text-[#737373] font-semibold text-[16px] sm:text-[18px] lg:text-[20px]">
+                        Mais Departamentos
+                    </h3>
+                    <ul className="flex flex-col gap-y-4 ml-2">
+                        {[
+                            "Petshop", "Produtos Regionais", "Brinquedos e Jogos",
+                            "Livros", "Música e Hobbies", "Bebês",
+                            "Alimentos e Bebidas", "Agro e Indústria"
+                        ].map((item, index) => (
+                            <li key={index} className="text-[#737373] text-[14px] sm:text-[16px] lg:text-[18px] hover:text-[#F47920] cursor-pointer">
+                                {item}
+                            </li>
+                        ))}
                     </ul>
-                    <span className='text-[#737373] text-[14px] cursor-pointer hover:text-[#F47920] underline mt-4'>Ver todos os departamentos</span>
+                    <span className="text-[#737373] text-[12px] sm:text-[14px] cursor-pointer hover:text-[#F47920] underline mt-4">
+                        Ver todos os departamentos
+                    </span>
                 </div>
             </div>
         </div>
-    )
+    );
 }

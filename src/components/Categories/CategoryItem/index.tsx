@@ -8,7 +8,7 @@ interface ICategoryItemProps {
 export default function CategoryItem({ category }: ICategoryItemProps) {
     return (
         <div className="group flex flex-col items-center text-center w-[110px] h-[160px]">
-            <div className="group flex items-center justify-center w-[86px] h-[86px] bg-[#EAE0D5] rounded-full hover:bg-[#F47920] cursor-pointer">
+            <div className="group flex items-center justify-center w-[86px] h-[86px] bg-[#EAE0D5] rounded-full group-hover:bg-[#F47920] cursor-pointer">
                 <Image
                     src={category.icon}
                     width={category.width}

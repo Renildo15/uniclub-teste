@@ -64,6 +64,6 @@ export const products: Product[] = [
         isCreditCard: true,
         instalments: 2,
         isPix: false,
-        soldBy: "Sebastião Salgado"
+        soldBy: "Manu Intimates"
     },
 ]
