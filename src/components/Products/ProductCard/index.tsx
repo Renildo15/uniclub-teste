@@ -25,10 +25,9 @@ export default function ProductCard({ product }: IProductCardProps) {
                 <Image
                     src={product.image}
                     alt={product.name}
-                    layout="responsive"
                     width={220}
                     height={200}
-                    className="object-cover"
+                    className="object-cover w-full h-auto"
                 />
                 <button className="absolute bottom-2 right-2 bg-white p-1.5 rounded-[80%] shadow-md hover:bg-gray-100 transition w-[26px] h-[26px]">
                     <Image

@@ -42,7 +42,7 @@ export default function Carousel() {
                 <Image
                     src={images[activeIndex]}
                     alt="Banner"
-                    objectFit="cover"
+                    style={{ objectFit: 'cover' }}
                     className="w-full h-[100px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[300px] 2xl:h-[320px] transition-opacity duration-500 ease-in-out"
                     width={1200}
                 />
