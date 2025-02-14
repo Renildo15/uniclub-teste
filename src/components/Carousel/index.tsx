@@ -38,18 +38,18 @@ export default function Carousel() {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
-            <div className="relative flex flex-row rounded-lg w-[84%] 3xl:w-[68%] 2xl:w-[67%]">
+            <div className="relative flex flex-row md:rounded-lg w-[90%] md:w-[84%] 3xl:w-[68%] 2xl:w-[67%]">
                 <Image
                     src={images[activeIndex]}
                     alt="Banner"
                     objectFit="cover"
-                    className="w-full h-[180px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[300px] 2xl:h-[320px] transition-opacity duration-500 ease-in-out"
+                    className="w-full h-[100px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[300px] 2xl:h-[320px] transition-opacity duration-500 ease-in-out"
                     width={1200}
                 />
                 {hover && (
                     <button
                         onClick={prevImage}
-                        className="absolute top-1/2  left-[-20px] -translate-y-1/2 bg-[#F47920] p-2 sm:p-3 rounded-full hover:bg-[#F47920]/70 transition-all w-8 sm:w-10 h-12 sm:h-14 flex items-center justify-center"
+                        className="hidden absolute top-1/2  left-[-20px] -translate-y-1/2 bg-[#F47920] p-2 sm:p-3 rounded-full hover:bg-[#F47920]/70 transition-all w-8 sm:w-10 h-12 sm:h-14 md:flex items-center justify-center"
                     >
                         <Image src={ChevronLeft} alt="Anterior" width={24} height={24} />
                     </button>
@@ -57,7 +57,7 @@ export default function Carousel() {
                 {hover && (
                     <button
                         onClick={nextImage}
-                        className="absolute top-1/2 right-[-20px] -translate-y-1/2 bg-[#F47920] p-2 sm:p-3 rounded-full hover:bg-[#F47920]/70 transition-all w-8 sm:w-10 h-12 sm:h-14 flex items-center justify-center"
+                        className="hidden absolute top-1/2 right-[-20px] -translate-y-1/2 bg-[#F47920] p-2 sm:p-3 rounded-full hover:bg-[#F47920]/70 transition-all w-8 sm:w-10 h-12 sm:h-14 md:flex items-center justify-center"
                     >
                         <Image src={ChevronRight} alt="Próximo" width={24} height={24} />
                     </button>

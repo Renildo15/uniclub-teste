@@ -4,19 +4,19 @@ import ProductCard from "./ProductCard";
 export default function Products() {
     return (
         <div className="flex flex-col justify-center items-center w-full">
-            <div className="flex flex-col rounded-lg bg-section py-6 px-8 w-[90%] sm:w-[84%] 3xl:w-[68%] 2xl:w-[67%]">
+            <div className="flex flex-col md:rounded-lg bg-section py-3 px-4 md:py-6 md:px-8 md:w-[84%] w-full sm:w-[84%] 3xl:w-[68%] 2xl:w-[67%]">
                 <div className="mb-6">
-                    <h2 className="text-white text-2xl text-center sm:text-left">
+                    <h2 className="text-white text-[16px] md:text-2xl sm:text-left">
                         Descontos cliente <strong>Unimed Natal</strong>
                     </h2>
                 </div>
-                <div className="flex flex-wrap gap-2 justify-center md:justify-between">
+                <div className="flex flex-nowrap overflow-x-auto scroll-smooth gap-2 justify-start md:justify-between scrollbar-hide">
                     {products.map((product, index) => (
                         <ProductCard key={index} product={product} />
                     ))}
                 </div>
             </div>
-            <div className="h-[80px]"></div>
+            <div className="h-[20px] md:h-[40px]"></div>
         </div>
     );
 }
