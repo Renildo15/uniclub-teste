@@ -4,22 +4,20 @@ import MobileCompanies from './MobileCompanies';
 
 interface IMobileDropdownMenuProps {
     isOpen: boolean;
-    onClose: () => void; // Função para fechar o menu
+    onClose: () => void;
 }
 
 const MobileDropdownMenu = forwardRef<HTMLDivElement, IMobileDropdownMenuProps>(
     ({ isOpen, onClose }, ref) => {
         return (
             <>
-                {/* Overlay */}
                 {isOpen && (
                     <div
                         className="fixed inset-0 bg-black opacity-50 z-40"
-                        onClick={onClose} // Fecha o menu ao clicar no overlay
+                        onClick={onClose}
                     ></div>
                 )}
 
-                {/* Menu Principal */}
                 <div
                     ref={ref}
                     className={`${

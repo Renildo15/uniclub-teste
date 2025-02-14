@@ -14,7 +14,7 @@ export default function Header() {
     const buttonRef = useRef<HTMLImageElement | null>(null);
 
     const toggleMenu = () => setIsOpen(!isOpen);
-    const closeMenu = () => setIsOpen(false); // Função para fechar o menu
+    const closeMenu = () => setIsOpen(false);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -55,15 +55,14 @@ export default function Header() {
                         className="sm:w-[220px] md:w-[220px] 2xl:w-[330] 3xl:w-[330]"
                     />
                 </div>
-                <SearchInput />
+                <SearchInput display="hidden" />
                 <HeaderOptions />
             </div>
 
-            {/* Menu Mobile */}
             <MobileDropdownMenu
                 ref={menuRef}
                 isOpen={isOpen}
-                onClose={closeMenu} // Passa a função para fechar o menu
+                onClose={closeMenu}
             />
         </header>
     );
