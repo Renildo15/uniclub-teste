@@ -37,7 +37,7 @@ export default function HeaderMenu() {
    
     return (
         <div className="flex flex-row justify-center bg-[#F7F3EE] shadow-[2px_3px_5px_rgba(0,0,0,0.2)]">
-            <div className="flex flex-row justify-between py-2 md:py-5 px-[14px] md:px-[24px] w-full md:w-[88%] 3xl:w-[70%] 2xl:w-[70%]">
+            <div className="flex flex-row justify-between py-2 md:py-5 px-[14px] md:px-[24px] xl:px-[30px] w-full md:w-[88%] 3xl:w-[70%] 2xl:w-[70%]">
                 <div className="flex flex-row gap-4 items-center">
                     <div ref={buttonRef} className="hidden md:flex md:flex-row md:items-center md:justify-center cursor-pointer" onClick={toggleMenu}>
                         <Image src={Menu} alt="menu" width={25} height={25} />
@@ -52,7 +52,7 @@ export default function HeaderMenu() {
                         <span className="text-[#3F3F3F] 3xl:text-[18px] text-[16px]">Descontos Cliente Unimed Natal</span>
                     </div>
                 </div>
-                <div className="hidden md:flex mr-5 3xl:mr-3 2xl:mr-3">
+                <div className="hidden md:flex ">
                     <span className="text-[#737373] 3xl:text-[16px] text-[14px] cursor-pointer">Venda no Uniclube</span>
                 </div>
             </div>

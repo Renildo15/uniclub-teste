@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import SearchInput from '../Header/SearchInput';
 import LogoU from "../../../public/logo-u.svg"
 import Image from 'next/image';
+import CloseIcon from "../../../public/icons/close-icon.svg"
 
 interface ISearchBarLateralProps {
     isOpen: boolean;
@@ -34,7 +35,7 @@ const SearchBarLateral = forwardRef<HTMLDivElement, ISearchBarLateralProps>(
                                 
                             />
                             <button className='text-[#737373] font-bold text-[18px]' onClick={onClose}>
-                                x
+                                <Image src={CloseIcon} width={12} alt="close"/>
                             </button>
                         </div>
                         <SearchInput display='flex'/>

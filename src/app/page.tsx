@@ -9,15 +9,17 @@ import SearchButton from "@/components/SearchButton";
 
 export default function Home() {
   return (
-    <main className=" flex flex-col gap-y-6 h-full bg-white">
-      <div>
-        <Header/>
-        <HeaderMenu/>
-      </div>
-      <Carousel/>
-      <Categories/>
-      <Products/>
-      <SearchButton/>
-    </main>
+      <main className="flex flex-col gap-y-6 h-full bg-white">
+          <div>
+              <Header />
+              <HeaderMenu />
+          </div>
+          <div className="flex flex-col justify-center items-center gap-y-4">
+              <Carousel />
+              <Categories />
+              <Products />
+              <SearchButton />
+          </div>
+      </main>
   );
 }

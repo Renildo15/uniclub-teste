@@ -6,7 +6,7 @@ import CartOption from "../Options/CartOption";
 
 export default function HeaderOptions() {
     return (
-        <div className="flex flex-row justify-end gap-x-2 md:justify-around w-[78px] sm:w-[60%] md:w-[50%] lg:w-[40%]">
+        <div className="flex flex-row justify-end gap-x-2 md:justify-between mr-1 md:mr-0 w-[78px] md:w-[30%] 2xl:w-[50%]">
             <LocalOption display="hidden"/>
             <LoginOption/>
             <CartOption/>
