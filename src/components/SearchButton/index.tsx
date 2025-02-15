@@ -35,7 +35,7 @@ export default function SearchButton() {
     return (
         <>
             <button
-                className="fixed bottom-4 right-4 bg-[#F47920] p-3 rounded-full shadow-lg hover:bg-[#F47920]/90 transition-all z-50 md:hidden"
+                className="fixed bottom-10 right-4 bg-[#F47920] p-3 rounded-full shadow-lg hover:bg-[#F47920]/90 transition-all z-50 md:hidden"
                 aria-label="Pesquisar"
                 onClick={toggleSearchBar}
             >
