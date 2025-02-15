@@ -38,7 +38,7 @@ export default function Carousel() {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
-            <div className="relative flex flex-row md:rounded-lg w-[90%] md:w-[84%] 3xl:w-[68%] 2xl:w-[67%]">
+            <div className="relative flex flex-row md:rounded-lg w-[90%] md:w-[84%] 3xl:w-[68%] 2xl:w-[67%] px-[3px] md:px-0">
                 <Image
                     src={images[activeIndex]}
                     alt="Banner"

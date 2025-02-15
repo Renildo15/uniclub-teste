@@ -22,6 +22,8 @@ export default function CartCard({ item }: ICartCardProps) {
 
     function applyDiscount(value: number) {
         if (!item.dicountValue) return value;
+        if (value <= 0) return 0;
+        
         const newValue = value - item.dicountValue;
         return newValue;
     }
