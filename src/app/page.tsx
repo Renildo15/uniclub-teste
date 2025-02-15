@@ -9,12 +9,12 @@ import SearchButton from "@/components/SearchButton";
 
 export default function Home() {
   return (
-      <main className="flex flex-col gap-y-2 h-full bg-white">
+      <main className="flex flex-col gap-y-4 h-full bg-white">
           <div>
               <Header />
               <HeaderMenu />
           </div>
-          <div className="flex flex-col justify-center items-center gap-y-2">
+          <div className="flex flex-col justify-center items-center gap-y-4">
               <Carousel />
               <Categories />
               <Products />
